@@ -56,6 +56,13 @@ while len(next_room_list)>0: #and it < 100:
     nstr=""
     state=0
     nl_save = 0
+    exitsArray = [
+        'id="Exits"',
+        'id="【𝐕𝐈.𝟐_𝐄𝐱𝐢𝐭𝐬】"',
+        'id=">>_Exits:"',
+        'id='"Exits?"'',
+        'id="Exits_2"'
+    ]
     while True:
         nl+=1
         nstr =f.readline()
@@ -64,7 +71,8 @@ while len(next_room_list)>0: #and it < 100:
 
 
         if state==0:
-            if 'id="Exits"' in nstr or 'id="【𝐕𝐈.𝟐_𝐄𝐱𝐢𝐭𝐬】"' in nstr or 'id=">>_Exits:"' in nstr:
+            # if 'id="Exits"' in nstr or 'id="【𝐕𝐈.𝟐_𝐄𝐱𝐢𝐭𝐬】"' in nstr or 'id=">>_Exits:"' in nstr or 'id='"Exits?"'' in nstr:
+            if any(elem in nstr for elem in exitsArray)
                 state=1
         elif state==1 :
             if '<ul>' in nstr:
