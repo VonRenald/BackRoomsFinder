@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackRoom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="searchContainer">
+        <input type="text" id="searchInput" placeholder="Rechercher une Room...">
+        <button id="searchButton">Rechercher</button>
+    </div>
+    <div class="modal" id="infoModal">
+        <span class="modal-close" onclick="closeModal()">X</span>
+        <p id="modalContent"></p>
+    </div>
+    <canvas id="myCanvas" width="12800" height="12800"></canvas>
+    <script src="Draw.js"></script>
+    <script>
+        window.onload = function() {
+            window.scrollTo(5700, 0);
+        };
+    </script>
+</body>
+</html>
